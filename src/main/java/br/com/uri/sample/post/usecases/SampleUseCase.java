@@ -16,7 +16,6 @@ public class SampleUseCase implements Sample {
     @Override
     public SampleResponse doSample(SampleDTO sampleDTO) {
         SampleEntity entity = new SampleEntity();
-        entity.setId(Long.valueOf(sampleDTO.getId()));
         entity.setName(sampleDTO.getName());
         sampleRepository.save(entity);
         return new SampleResponse(sampleDTO.getName() + sampleDTO.getId());
