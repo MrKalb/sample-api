@@ -1,0 +1,8 @@
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/usecases/Sample.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/dto/SampleDTO.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/entities/SampleEntity.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/SampleApplication.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/controller/PostController.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/ping/controller/PingController.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/usecases/SampleUseCase.java
+/Users/igorkalb/Desktop/sample-api/sample/src/main/java/br/com/uri/sample/post/dto/SampleResponse.java

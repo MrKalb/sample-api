@@ -1,0 +1,8 @@
+br/com/uri/sample/post/controller/PostController.class
+br/com/uri/sample/SampleApplication.class
+br/com/uri/sample/post/dto/SampleResponse.class
+br/com/uri/sample/post/usecases/Sample.class
+br/com/uri/sample/post/usecases/SampleUseCase.class
+br/com/uri/sample/post/entities/SampleEntity.class
+br/com/uri/sample/ping/controller/PingController.class
+br/com/uri/sample/post/dto/SampleDTO.class
