@@ -1,9 +1,9 @@
 package br.com.uri.sample.post.usecases;
 
-import br.com.uri.sample.post.entities.SampleEntity;
+import br.com.uri.sample.post.model.Sample;
 
 public interface GetSample {
 
-   SampleEntity getSample(Long id);
+   Sample getSample(Long id);
 
 }
