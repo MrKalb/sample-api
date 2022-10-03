@@ -20,6 +20,13 @@ public class PostController {
     @PostMapping("/sample")
     public ResponseEntity<SampleResponse> post(@RequestBody SampleDTO sampleDTO) {
 
-        return ResponseEntity.ok(sample.doSample(sampleDTO));
+        return ResponseEntity.ok(sampleToSampleResponse(sample.doSample(sampleDTO)));
+    }
+
+    private SampleResponse sampleToSampleResponse(br.com.uri.sample.post.model.Sample sample) {
+        return SampleResponse.builder()
+                .id(sample.getId())
+                .name(sample.getName())
+                .build();
     }
 }

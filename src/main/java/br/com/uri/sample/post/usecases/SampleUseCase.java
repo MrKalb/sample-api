@@ -1,7 +1,6 @@
 package br.com.uri.sample.post.usecases;
 
 import br.com.uri.sample.post.dto.SampleDTO;
-import br.com.uri.sample.post.dto.SampleResponse;
 import br.com.uri.sample.post.entities.SampleEntity;
 import br.com.uri.sample.post.repository.SampleRepository;
 import org.springframework.stereotype.Service;
@@ -16,10 +15,17 @@ public class SampleUseCase implements Sample {
     }
 
     @Override
-    public SampleResponse doSample(SampleDTO sampleDTO) {
+    public br.com.uri.sample.post.model.Sample doSample(SampleDTO sampleDTO) {
+        SampleEntity entity = saveEntity(sampleDTO);
+        return br.com.uri.sample.post.model.Sample.builder()
+                .id(entity.getId())
+                .name(entity.getName())
+                .build();
+    }
+
+    private SampleEntity saveEntity(SampleDTO sampleDTO) {
         SampleEntity entity = new SampleEntity();
         entity.setName(sampleDTO.getName());
-        sampleRepository.save(entity);
-        return new SampleResponse(sampleDTO.getName() + sampleDTO.getId());
+        return sampleRepository.save(entity);
     }
 }

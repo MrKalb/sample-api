@@ -1,6 +1,7 @@
 package br.com.uri.sample.post.controller;
 
-import br.com.uri.sample.post.entities.SampleEntity;
+import br.com.uri.sample.post.dto.SampleResponse;
+import br.com.uri.sample.post.model.Sample;
 import br.com.uri.sample.post.usecases.GetSample;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +18,16 @@ public class GetController {
     }
 
     @GetMapping("/sample/{id}")
-    public ResponseEntity<SampleEntity> getSample
+    public ResponseEntity<SampleResponse> getSample
             (@PathVariable("id") Long id
             ) {
-            return ResponseEntity.ok(getSample.getSample(id));
+            return ResponseEntity.ok(sampleToSampleResponse(getSample.getSample(id)));
+    }
+
+    private SampleResponse sampleToSampleResponse(Sample sample) {
+        return SampleResponse.builder()
+                .id(sample.getId())
+                .name(sample.getName())
+                .build();
     }
 }
