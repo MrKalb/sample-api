@@ -24,8 +24,9 @@ public class SampleUseCase implements Sample {
     }
 
     private SampleEntity saveEntity(SampleDTO sampleDTO) {
-        SampleEntity entity = new SampleEntity();
-        entity.setName(sampleDTO.getName());
+        SampleEntity entity = SampleEntity.builder()
+                .name(sampleDTO.getName())
+                .build();
         return sampleRepository.save(entity);
     }
 }
