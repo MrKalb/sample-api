@@ -1,6 +1,9 @@
 package br.com.uri.sample.post.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +13,9 @@ import java.io.Serializable;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class SampleEntity implements Serializable {
 
     @Id
