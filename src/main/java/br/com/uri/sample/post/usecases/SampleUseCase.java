@@ -4,14 +4,16 @@ import br.com.uri.sample.post.dto.SampleDTO;
 import br.com.uri.sample.post.dto.SampleResponse;
 import br.com.uri.sample.post.entities.SampleEntity;
 import br.com.uri.sample.post.repository.SampleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class SampleUseCase implements Sample {
 
-    @Autowired
-    private SampleRepository sampleRepository;
+    private final SampleRepository sampleRepository;
+
+    public SampleUseCase(SampleRepository sampleRepository) {
+        this.sampleRepository = sampleRepository;
+    }
 
     @Override
     public SampleResponse doSample(SampleDTO sampleDTO) {
